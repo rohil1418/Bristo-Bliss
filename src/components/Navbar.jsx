@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Menu", href: "#menu" },
-    { name: "Pages", href: "#pages" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "About", href: "/#about" },
+    { name: "Menu", href: "/#menu" },
+    { name: "Pages", href: "/#pages" },
+    { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -14,17 +15,17 @@ export default function Navbar() {
     return (
         <nav className="sticky top-0 z-50 w-full bg-[#f9f9f7]">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
-                    <a href="#home" className="flex items-center gap-2">
-                        <img
-                            src="/images/bistro-logo.png"
-                            alt="Bistro Bliss Logo"
-                            className="h-15 w-15 object-contain"
-                        />
+                <a href="#home" className="flex items-center gap-2">
+                    <img
+                        src="/images/bistro-logo.png"
+                        alt="Bistro Bliss Logo"
+                        className="h-15 w-15 object-contain"
+                    />
 
-                        <span className="italic text-xl font-bold text-[#5C4033] sm:text-2xl">
-                            Bistro <span className="italic text-[#ad343e]">Bliss</span>
-                        </span>
-                    </a>
+                    <span className="italic text-xl font-bold text-[#5C4033] sm:text-2xl">
+                        Bistro <span className="italic text-[#ad343e]">Bliss</span>
+                    </span>
+                </a>
 
                 <ul className="hidden items-center gap-8 lg:flex">
                     {navLinks.map((link) => (
@@ -39,12 +40,12 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                <a
-                    href="#book"
-                    className="hidden rounded-full border-2 border-[#2c2c2c] px-6 py-2.5 text-sm font-semibold text-[#2c2c2c] transition-all duration-200 hover:bg-[#2c2c2c] hover:text-white lg:inline-block"
+                <Link
+                    to="/book-table"
+                    className="rounded-full border-2 border-[#b83243] bg-white px-5 py-2.5 text-sm font-semibold text-[#b83243] transition-all duration-300 hover:bg-[#b83243] hover:text-white"
                 >
                     Book A Table
-                </a>
+                </Link>
 
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -84,13 +85,13 @@ export default function Navbar() {
                         ))}
 
                         <li className="pt-3">
-                            <a
-                                href="#book"
+                            <Link
+                                to="/book-table"
                                 onClick={() => setMenuOpen(false)}
-                                className="block rounded-full border-2 border-[#2c2c2c] px-5 py-2.5 text-center text-sm font-semibold text-[#2c2c2c] transition hover:bg-[#2c2c2c] hover:text-white"
+                                className="block rounded-full border-2 border-[#b83243] bg-white px-5 py-2.5 text-center text-sm font-semibold text-[#b83243] transition-all duration-300 hover:bg-[#b83243] hover:text-white"
                             >
                                 Book A Table
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
