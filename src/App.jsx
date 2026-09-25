@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import BookTable from "./components/BookTable";
 import MenuPage from "./components/MenuPage";
+import BlogPage from "./components/BlogPage";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -49,6 +50,7 @@ function App() {
         />
 
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/blog" element={<BlogPage />} />
 
       </Routes>
 
