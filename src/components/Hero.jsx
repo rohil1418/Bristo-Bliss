@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section
@@ -27,18 +29,18 @@ export default function Hero() {
 
           <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#book"
+              href="/book-table"
               className="rounded-full border border-black px-6 py-3 text-sm font-medium text-black transition hover:bg-black hover:text-white"
             >
               Book A Table
             </a>
 
-            <a
-              href="#menu"
-              className="rounded-full border border-black px-6 py-3 text-sm font-medium text-black transition hover:bg-black hover:text-white"
+            <Link
+              to="/menu"
+              className="rounded-full border border-black px-7 py-3 text-sm font-semibold text-black transition hover:bg-black hover:text-white"
             >
               Explore Menu
-            </a>
+            </Link>
           </div>
 
         </div>
