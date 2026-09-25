@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const articles = [
     {
         title: "How to prepare the perfect french fries in an air fryer",
@@ -31,9 +33,12 @@ export default function Blog() {
                         Our Blog & Articles
                     </h2>
 
-                    <button className="w-fit rounded-full bg-[#b83243] px-6 py-3 text-xs font-semibold text-white transition-colors duration-300 hover:bg-[#8f2534]">
+                    <Link
+                        to="/blog"
+                        className="rounded-full bg-[#b83243] px-5 py-3 text-xs font-semibold text-white transition-all duration-300 hover:bg-[#922936]"
+                    >
                         Read All Articles
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="mt-16 grid grid-cols-1 gap-7 lg:grid-cols-2">
