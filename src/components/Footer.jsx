@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  FaTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaGithub,
-} from "react-icons/fa";
+  faInstagram,
+  faFacebookF,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -16,7 +18,7 @@ export default function Footer() {
             <img
               src="/images/bistro-logo.png"
               alt="Bistro Bliss"
-              className="bg-[#474747] h-12 w-12 object-contain"
+              className="bg-gray-100 h-12 w-12 object-contain"
             />
 
             <h2 className="font-serif text-2xl font-bold italic">
@@ -30,33 +32,41 @@ export default function Footer() {
             our company and.
           </p>
 
-          <div className="mt-6 flex gap-3">
+          <div className="flex gap-4 mt-6">
             <a
-              href="#"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#b83243] text-sm transition-colors duration-300 hover:bg-[#8f2534]"
-            >
-              <FaTwitter />
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#AD343E] text-lg transition hover:bg-[#AD343E] hover:text-white"            >
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
 
             <a
-              href="#"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#b83243] text-sm transition-colors duration-300 hover:bg-[#8f2534]"
-            >
-              <FaFacebookF />
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#AD343E] text-lg transition hover:bg-[#AD343E] hover:text-white"            >
+              <FontAwesomeIcon icon={faFacebookF} />
             </a>
 
             <a
-              href="#"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#b83243] text-sm transition-colors duration-300 hover:bg-[#8f2534]"
-            >
-              <FaInstagram />
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#AD343E] text-lg transition hover:bg-[#AD343E] hover:text-white"            >
+              <FontAwesomeIcon icon={faTwitter} />
             </a>
 
             <a
-              href="#"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#b83243] text-sm transition-colors duration-300 hover:bg-[#8f2534]"
-            >
-              <FaGithub />
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#AD343E] text-lg transition hover:bg-[#AD343E] hover:text-white"            >
+              <FontAwesomeIcon icon={faGithub} />
             </a>
           </div>
         </div>
@@ -67,12 +77,19 @@ export default function Footer() {
           </h3>
 
           <ul className="mt-7 space-y-5 text-sm text-gray-100">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/delivery">Delivery</a></li>
+            <li><a href="#home" className="text-white hover:text-[#AD343E] transition">Home</a></li>
+            <li><a href="#about" className="text-white hover:text-[#AD343E] transition">About</a></li>
+            <li><a href="/menu" className="text-white hover:text-[#AD343E] transition">Menu</a></li>
+            <li><a href="/blog" className="text-white hover:text-[#AD343E] transition">Blog</a></li>
+            <li><a href="/contact" className="text-white hover:text-[#AD343E] transition">Contact</a></li>
+            <li>
+              <Link
+              to="/delivery"
+              className="relative z-50 inline-block cursor-pointer text-white hover:text-[#ad343e] transition"
+            >
+              Delivery
+            </Link>
+            </li>
           </ul>
         </div>
 
