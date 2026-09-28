@@ -8,32 +8,33 @@ export default function Hero() {
     >
       <img
         src="/images/hero-banner.png"
-        alt=""
-        className="block w-full h-auto"
+        alt="Bistro Bliss restaurant"
+        className="h-[500px] w-full object-cover object-center sm:h-[600px] md:h-auto"
       />
 
-      <div className="absolute inset-0 flex items-center justify-center px-5">
-        <div className="w-full max-w-2xl text-center">
+      <div className="absolute inset-0 flex items-center justify-center px-5 text-center">
+        <div className="w-full max-w-2xl">
 
-          <h1 className="font-serif text-5xl leading-[1.05] text-black sm:text-6xl md:text-7xl">
+          <h1 className="font-serif text-4xl leading-[1.05] text-black sm:text-6xl md:text-7xl">
             Best food for
             <br />
             your taste
           </h1>
 
-          <p className="mx-auto mt-6 max-w-lg text-sm leading-6 text-black sm:text-base">
+          <p className="mx-auto mt-5 max-w-lg text-sm leading-6 text-black sm:mt-6 sm:text-base">
             Discover delectable cuisine and unforgettable moments
             <br className="hidden sm:block" />
             in our welcoming, culinary haven.
           </p>
 
-          <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="/book-table"
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-7 sm:flex-row sm:gap-4">
+
+            <Link
+              to="/book-table"
               className="rounded-full border border-black px-6 py-3 text-sm font-medium text-black transition hover:bg-black hover:text-white"
             >
               Book A Table
-            </a>
+            </Link>
 
             <Link
               to="/menu"
@@ -41,6 +42,7 @@ export default function Hero() {
             >
               Explore Menu
             </Link>
+
           </div>
 
         </div>
@@ -48,3 +50,4 @@ export default function Hero() {
     </section>
   );
 }
+
