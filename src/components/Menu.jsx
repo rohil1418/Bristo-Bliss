@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 const menuItems = [
   {
     title: "Breakfast",
+    path: "/menu/breakfast",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +22,7 @@ const menuItems = [
   },
   {
     title: "Main Dishes",
+    path: "/menu/main-dishes",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -36,6 +40,7 @@ const menuItems = [
   },
   {
     title: "Drinks",
+    path: "/menu/drinks",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +58,7 @@ const menuItems = [
   },
   {
     title: "Desserts",
+    path: "/menu/desserts",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -104,12 +110,12 @@ export default function Menu() {
                 and pride for our life.
               </p>
 
-              <a
-                href="#menu"
-                className="mt-5 text-sm font-medium text-[#ad343e]"
+              <Link
+                to={item.path}
+                className="mt-5 text-sm font-medium text-[#ad343e] hover:underline"
               >
                 Explore Menu
-              </a>
+              </Link>
             </div>
           ))}
         </div>
