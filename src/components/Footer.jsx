@@ -77,19 +77,46 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-bold">
+          <h3 className="text-lg font-semibold text-white mb-5">
             Utility Pages
           </h3>
 
-          <ul className="mt-7 space-y-5 text-sm text-gray-100">
-            <li>Start Here</li>
-            <li>Styleguide</li>
-            <li>Password Protected</li>
-            <li>404 Not Found</li>
-            <li>Licenses</li>
-            <li>Changelog</li>
-            <li>View More</li>
-          </ul>
+          <div className="flex flex-col gap-3">
+            <a
+              href="/style-guide"
+              className="text-white hover:text-[#AD343E] transition"
+            >
+              Style Guide
+            </a>
+
+            <a
+              href="/404"
+              className="text-white hover:text-[#AD343E] transition"
+            >
+              View More
+            </a>
+
+            <a
+              href="/licenses"
+              className="text-white hover:text-[#AD343E] transition"
+            >
+              Licenses
+            </a>
+
+            <a
+              href="/changelog"
+              className="text-white hover:text-[#AD343E] transition"
+            >
+              Changelog
+            </a>
+
+            <a
+              href="/password-protected"
+              className="text-white hover:text-[#AD343E] transition"
+            >
+              Password Protected
+            </a>
+          </div>
         </div>
 
         <div>
