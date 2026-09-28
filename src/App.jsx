@@ -15,6 +15,11 @@ import MenuPage from "./components/MenuPage";
 import BlogPage from "./components/BlogPage";
 import NotFound from "./components/NotFound";
 
+import Breakfast from "./pages/Breakfast";
+import MainDishes from "./pages/MainDishes";
+import Drinks from "./pages/Drinks";
+import Desserts from "./pages/Desserts";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -40,18 +45,19 @@ function App() {
           }
         />
 
-        <Route
-          path="/contact"
-          element={<Contact />}
-        />
-
-        <Route
-          path="/book-table"
-          element={<BookTable />}
-        />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/book-table" element={<BookTable />} />
 
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/menu/breakfast" element={<Breakfast />} />
+        <Route path="/menu/main-dishes" element={<MainDishes />} />
+        <Route path="/menu/drinks" element={<Drinks />} />
+        <Route path="/menu/desserts" element={<Desserts />} />
+
         <Route path="/blog" element={<BlogPage />} />
+
+        <Route path="/delivery" element={<Delivery />} />
+
         <Route path="/style-guide" element={<NotFound />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="/licenses" element={<NotFound />} />
