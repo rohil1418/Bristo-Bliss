@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 import BookTable from "./components/BookTable";
 import MenuPage from "./components/MenuPage";
 import BlogPage from "./components/BlogPage";
+import NotFound from "./components/NotFound";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -51,6 +52,11 @@ function App() {
 
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/style-guide" element={<NotFound />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="/licenses" element={<NotFound />} />
+        <Route path="/changelog" element={<NotFound />} />
+        <Route path="/password-protected" element={<NotFound />} />
 
       </Routes>
 

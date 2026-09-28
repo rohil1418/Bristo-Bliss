@@ -74,7 +74,7 @@ export default function About() {
           </p>
 
           <a
-            href="#contact"
+            href="/contact"
             className="mt-8 inline-block rounded-full border border-black px-7 py-3 text-sm font-semibold text-black"
           >
             More About Us
